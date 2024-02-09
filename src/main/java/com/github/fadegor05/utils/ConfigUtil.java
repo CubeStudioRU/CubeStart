@@ -7,6 +7,8 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
+import static com.github.fadegor05.Main.CUBE_API_URL;
+
 public class ConfigUtil {
 
     private static Config config;
@@ -56,7 +58,7 @@ public class ConfigUtil {
     public static void handleConfig() {
         loadConfig();
         if (config == null){
-            config = new Config(0,null,null, null);
+            config = new Config(0,null,null, CUBE_API_URL);
         }
         saveConfig();
     }
