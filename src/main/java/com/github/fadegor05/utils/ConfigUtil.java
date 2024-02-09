@@ -7,6 +7,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
+import static com.github.fadegor05.Main.CONFIG_FILE;
 import static com.github.fadegor05.Main.CUBE_API_URL;
 
 public class ConfigUtil {
@@ -15,7 +16,7 @@ public class ConfigUtil {
 
     private static void loadConfig() {
         Gson gson = new Gson();
-        String path = "./config.json";
+        String path = String.format("./%s", CONFIG_FILE);
         File file = new File(path);
         if (file.exists()){
             try {
@@ -39,7 +40,7 @@ public class ConfigUtil {
     private static void saveConfig() {
         try {
             Gson gson = new Gson();
-            File file = new File("./config.json");
+            File file = new File(String.format("./%s", CONFIG_FILE));
             file.createNewFile();
             Writer writer = new BufferedWriter(new OutputStreamWriter(
                     Files.newOutputStream(file.toPath()), StandardCharsets.UTF_8));
