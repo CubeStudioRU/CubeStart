@@ -10,7 +10,7 @@ public class CreditsOutCli {
     public static void CreditsOutCli() throws IOException {
         String asciiArt1 = FigletFont.convertOneLine("CubeStart");
         System.out.println(asciiArt1);
-        String text = String.format("v%s / CubeStudio / by fadegor05 (Lyroq1s)", CUBESTART_VERSION);
+        String text = String.format("v%s / CubeStudio / by fadegor05 (Lyroq1s)%n", CUBESTART_VERSION);
         System.out.println(text);
     }
 }
