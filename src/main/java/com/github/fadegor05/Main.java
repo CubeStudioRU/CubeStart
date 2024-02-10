@@ -4,6 +4,7 @@ import com.github.fadegor05.cli.CreditsOutCli;
 import com.github.fadegor05.cli.InstanceDirectoryCli;
 import com.github.fadegor05.cli.InstanceOutCli;
 import com.github.fadegor05.models.Config;
+import com.github.fadegor05.models.Directories;
 import com.github.fadegor05.models.Instance;
 import com.github.fadegor05.utils.ConfigUtil;
 import com.mashape.unirest.http.exceptions.UnirestException;
@@ -32,5 +33,7 @@ public class Main {
 
         Instance instance = getInstanceByAPI(config.getApiUrl());
         InstanceOutCli.InstanceOutCli(instance);
+
+        Directories directories = new Directories(config.getInstanceDirectory());
     }
 }
