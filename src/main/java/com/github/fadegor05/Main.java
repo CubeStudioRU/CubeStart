@@ -20,7 +20,7 @@ public class Main {
     public static final String MODS_FOLDER = "mods";
     public static final String CUSTOM_MODS_FOLDER = "custom_mods";
 
-    public static void main(String[] args) throws IOException, UnirestException {
+    public static void main(String[] args) throws IOException {
         CreditsOutCli.CreditsOutCli();
         ConfigUtil.handleConfig();
 
