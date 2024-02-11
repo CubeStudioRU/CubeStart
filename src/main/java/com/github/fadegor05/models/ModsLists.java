@@ -5,7 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class ModsLists {
     private ArrayList<String> minecraftMods = new ArrayList<>();
@@ -21,8 +20,8 @@ public class ModsLists {
         ArrayList<String> mods = new ArrayList<>();
         try {
             List<Path> minecraftModsFiles = Files.list(path).toList();
-            for (int i = 0; i < minecraftModsFiles.size(); i++) {
-                String fileName = minecraftModsFiles.get(i).getFileName().toString();
+            for (Path minecraftModsFile : minecraftModsFiles) {
+                String fileName = minecraftModsFile.getFileName().toString();
                 mods.add(fileName);
             }
         }
@@ -51,5 +50,17 @@ public class ModsLists {
 
     public ArrayList<String> getExternalMods() {
         return externalMods;
+    }
+
+    public void setMinecraftMods(ArrayList<String> minecraftMods) {
+        this.minecraftMods = minecraftMods;
+    }
+
+    public void setCustomMods(ArrayList<String> customMods) {
+        this.customMods = customMods;
+    }
+
+    public void setExternalMods(ArrayList<String> externalMods) {
+        this.externalMods = externalMods;
     }
 }
