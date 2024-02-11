@@ -7,6 +7,8 @@ import kong.unirest.HttpResponse;
 import kong.unirest.Unirest;
 import kong.unirest.UnirestException;
 
+import static com.github.fadegor05.cli.ExitWaitCli.exitWaitCli;
+
 
 public class CubeApiUtil {
     public static Instance getInstanceByAPI(String cubeApiUrl)  {
@@ -22,7 +24,7 @@ public class CubeApiUtil {
         }
         catch (UnirestException e) {
             System.out.println("Сервис Cube-API недоступен, попробуйте позже...");
-            System.exit(0);
+            exitWaitCli();
         }
         return null;
     }

@@ -8,6 +8,7 @@ import com.github.fadegor05.utils.ConfigUtil;
 
 import java.io.IOException;
 
+import static com.github.fadegor05.cli.ExitWaitCli.exitWaitCli;
 import static com.github.fadegor05.utils.CubeApiUtil.getInstanceByAPI;
 import static com.github.fadegor05.utils.ModsActionsUtil.ModsActionsHandler;
 
@@ -38,12 +39,13 @@ public class Main {
 
         if (modsActions.getCopyCustomModsList().isEmpty() && modsActions.getDeleteMinecraftModsList().isEmpty() && modsActions.getInstallExternalModsList().isEmpty()) {
             System.out.println("Никаких необходимых изменений нет, Minecraft готов к запуску!");
-            System.exit(0);
+            exitWaitCli();
         }
         System.out.println("Есть необходимые изменения, выполняем их...\n");
 
         ModsActionsHandler(modsActions, instance, config.getInstanceDirectory());
 
         System.out.println("\nВсе изменения были совершены, Minecraft готов к запуску!");
+        exitWaitCli();
     }
 }

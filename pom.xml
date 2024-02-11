@@ -6,7 +6,8 @@
 
     <groupId>com.github.fadegor05</groupId>
     <artifactId>CubeStart</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1</version>
+    
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
