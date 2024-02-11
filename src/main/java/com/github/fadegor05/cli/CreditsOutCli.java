@@ -1,7 +1,6 @@
 package com.github.fadegor05.cli;
 
 import com.github.lalyos.jfiglet.FigletFont;
-import com.github.fadegor05.Main;
 import java.io.IOException;
 
 import static com.github.fadegor05.Main.CUBESTART_VERSION;
