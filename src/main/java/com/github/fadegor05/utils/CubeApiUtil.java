@@ -3,10 +3,9 @@ package com.github.fadegor05.utils;
 import com.github.fadegor05.models.Config;
 import com.github.fadegor05.models.Instance;
 import com.google.gson.Gson;
-import com.mashape.unirest.http.JsonNode;
-import com.mashape.unirest.http.Unirest;
-import com.mashape.unirest.http.exceptions.UnirestException;
-import com.mashape.unirest.http.HttpResponse;
+import kong.unirest.HttpResponse;
+import kong.unirest.Unirest;
+import kong.unirest.UnirestException;
 
 
 public class CubeApiUtil {
