@@ -13,8 +13,8 @@ import static com.github.fadegor05.utils.CubeApiUtil.getInstanceByAPI;
 import static com.github.fadegor05.utils.ModsActionsUtil.ModsActionsHandler;
 
 public class Main {
-    public static final String CUBE_API_URL = "http://cubeshield.ru:8000/api/v1";
-    public static final String CUBESTART_VERSION = "0.0.1";
+    public static final String CUBE_API_URL = "https://api.cubeshield.ru/api/v1";
+    public static final String CUBESTART_VERSION = "0.1.1";
     public static final String CONFIG_FILE = "config.json";
     public static final String MODS_FOLDER = "mods";
     public static final String CUSTOM_MODS_FOLDER = "custom_mods";
