@@ -27,7 +27,7 @@ public class ModsActionsUtil {
 
     private static void deleteMinecraftModsListHandler(ArrayList<String> modsList, String instanceDirectory) {
         for (String mod : modsList) {
-            Path modPath = Path.of(String.format("%s\\%s\\%s", instanceDirectory, MODS_FOLDER, mod));
+            Path modPath = Path.of(String.format("%s/%s/%s", instanceDirectory, MODS_FOLDER, mod));
             System.out.println(String.format("· Удаление %s", mod));
             try {
                 Files.delete(modPath);
@@ -40,8 +40,8 @@ public class ModsActionsUtil {
 
     private static void copyCustomModsListHandler(ArrayList<String> modsList, String instanceDirectory) {
         for (String mod : modsList) {
-            Path customModPath = Path.of(String.format("%s\\%s\\%s", instanceDirectory, CUSTOM_MODS_FOLDER, mod));
-            Path modPath = Path.of(String.format("%s\\%s\\%s", instanceDirectory, MODS_FOLDER, mod));
+            Path customModPath = Path.of(String.format("%s/%s/%s", instanceDirectory, CUSTOM_MODS_FOLDER, mod));
+            Path modPath = Path.of(String.format("%s/%s/%s", instanceDirectory, MODS_FOLDER, mod));
             System.out.println(String.format("· Копирование %s", mod));
             try {
                 Files.copy(customModPath, modPath);
@@ -57,7 +57,7 @@ public class ModsActionsUtil {
             for (InstanceMod instanceMod : instance.getMods()) {
                 if (mod.equals(instanceMod.getFile())) {
                     System.out.println(String.format("\n· Установка %s", instanceMod.getFile()));
-                    String modPath = String.format("%s\\%s\\%s", instanceDirectory, MODS_FOLDER, instanceMod.getFile());
+                    String modPath = String.format("%s/%s/%s", instanceDirectory, MODS_FOLDER, instanceMod.getFile());
                     HttpResponse<File> fileHttpResponse = Unirest.get(instanceMod.getUrl())
                             .downloadMonitor((String b, String fileName, Long bytesWritten, Long bytesTotal) -> {
                                 try (ProgressBar pb = new ProgressBar(fileName, bytesTotal)) {
