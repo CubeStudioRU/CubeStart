@@ -4,10 +4,8 @@ import com.github.fadegor05.models.Instance;
 import com.github.fadegor05.models.InstanceMod;
 import com.github.fadegor05.models.ModsActions;
 import kong.unirest.HttpResponse;
-import kong.unirest.ProgressMonitor;
 import kong.unirest.Unirest;
 import me.tongfei.progressbar.ProgressBar;
-import me.tongfei.progressbar.ProgressBarBuilder;
 
 import java.io.File;
 import java.io.IOException;
