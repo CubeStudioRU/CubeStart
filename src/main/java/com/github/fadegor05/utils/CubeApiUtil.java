@@ -1,6 +1,5 @@
 package com.github.fadegor05.utils;
 
-import com.github.fadegor05.models.Config;
 import com.github.fadegor05.models.Instance;
 import com.google.gson.Gson;
 import kong.unirest.HttpResponse;

@@ -12,8 +12,8 @@ public class Directories {
     private final Path customModsPath;
 
     public Directories(String instanceDirectory) throws IOException {
-        Path minecraftModsPath = Path.of(String.format("%s\\%s", instanceDirectory, MODS_FOLDER)).toAbsolutePath();
-        Path customModsPath = Path.of(String.format("%s\\%s", instanceDirectory, CUSTOM_MODS_FOLDER)).toAbsolutePath();
+        Path minecraftModsPath = Path.of(String.format("%s/%s", instanceDirectory, MODS_FOLDER)).toAbsolutePath();
+        Path customModsPath = Path.of(String.format("%s/%s", instanceDirectory, CUSTOM_MODS_FOLDER)).toAbsolutePath();
         if (!Files.isDirectory(minecraftModsPath)) {
             Files.createDirectory(minecraftModsPath);
         }
