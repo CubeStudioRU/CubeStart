@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ExitWaitCli {
     public static void exitWaitCli() {
-        System.out.println("\nНажмите любую клавишу, чтобы завершить программу...");
+        System.out.println("\nНажмите Enter, чтобы завершить программу...");
         Scanner scanner = new Scanner(System.in);
         String str = scanner.nextLine();
         System.exit(0);
