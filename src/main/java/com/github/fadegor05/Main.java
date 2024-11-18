@@ -17,8 +17,8 @@ import static com.github.fadegor05.utils.ModsActionsUtil.ModsActionsHandler;
 
 public class Main {
     public static final String CUBE_API_URL = "http://api.cubeshield.ru:8000/api/v1";
-    public static final String CUBESTART_VERSION = "0.1.2";
-    public static final String CONFIG_FILE = "cuebstart_config.json";
+    public static final String CUBESTART_VERSION = "0.1.3";
+    public static final String CONFIG_FILE = "cubestart_config.json";
     public static final String MODS_FOLDER = "mods";
     public static final String CUSTOM_MODS_FOLDER = "custom_mods";
 
