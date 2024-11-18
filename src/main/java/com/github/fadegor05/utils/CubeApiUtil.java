@@ -12,7 +12,7 @@ import static com.github.fadegor05.cli.ExitWaitCli.exitWaitCli;
 public class CubeApiUtil {
     public static Instance getInstanceByAPI(String cubeApiUrl)  {
         System.out.println("Подключение к Cube-API...");
-        String CONNECT_API_URL = String.format("%s/get_compiled_instance", cubeApiUrl);
+        String CONNECT_API_URL = String.format("%s/instances", cubeApiUrl);
         try {
             HttpResponse<String> response = Unirest.get(CONNECT_API_URL).asString();
             if (response.getStatus() < 400){
