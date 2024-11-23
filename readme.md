@@ -39,6 +39,14 @@ CubeStart работает совместно с [Cube-API](https://github.com/f
 
 ## Установщик (NEW)
 
+### Modrinth
+
+Windows
+```
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/CubeStudioRU/CubeStart/master/scripts/modrinth.ps1' -OutFile '$env:TEMP\modrinth.ps1'; if (-not (Test-Path '$env:TEMP\System.Data.SQLite.dll')) { Invoke-WebRequest -Uri 'https://github.com/CubeStudioRU/CubeStart/raw/master/scripts/System.Data.SQLite.dll' -OutFile '$env:TEMP\System.Data.SQLite.dll'; }; . '$env:TEMP\modrinth.ps1'"
+```
+
+
 ### PrismLauncher
 
 Windows
