@@ -37,6 +37,20 @@ CubeStart работает совместно с [Cube-API](https://github.com/f
 * [ ] Поддержка нескольких обновляемых сборок (зависит от Cube-API) 🗃️
 * [ ] Модульность сборок (управление независимыми компонентами и модернизация сборки) 🎯
 
+## Установщик (NEW)
+
+### PrismLauncher
+
+Windows
+```
+powershell -Command "Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/CubeStudioRU/CubeStart/master/scripts/prism.ps1' -OutFile '$env:TEMP\prism.ps1'; . '$env:TEMP\prism.ps1'"
+```
+
+MacOS
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/CubeStudioRU/CubeStart/master/scripts/prism.sh)"
+```
+
 ## Использование
 
 ### Использование в связке с лаунчером
