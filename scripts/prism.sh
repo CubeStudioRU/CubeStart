@@ -47,6 +47,7 @@ echo "Обновляем файл instance.cfg..."
 if [[ -f "$config_file" ]]; then
     # Удаляем старую строку PreLaunchCommand, если она есть
     sed -i '' '/^PreLaunchCommand/d' "$config_file"
+    sed -i '' '/^OverrideCommands/d' "$config_file"
 else
     # Если файл не существует, создаем его
     touch "$config_file"
@@ -60,6 +61,7 @@ fi
 # Добавляем новую строку PreLaunchCommand в секцию [General]
 sed -i '' "/^\[General\]/a\\
 PreLaunchCommand=java -jar $file_name --skip --dir=\"\$INST_MC_DIR\"\\
+OverrideCommands=true
 " "$config_file"
 
 echo "Готово! CubeStart успешно установлен и настроен для Instance '$instance_name'."
